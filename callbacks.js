@@ -30,3 +30,11 @@ function fetchData(callback) {
     }, 2000); // Simulate a delay of 2 seconds
   }
   
+  // Callback function to handle the fetched data
+function handleData(data) {
+    console.log("Received data:", data);
+  }
+  
+  // Call the fetchData function and pass the handleData callback
+  fetchData(handleData);
+  console.log("Fetching data...");
